@@ -1,33 +1,31 @@
 import os, io
-from google.cloud import vision_v1
 
-key_path = 'ServiceAccToken_ChuThang.JSON'
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = key_path
-client = vision_v1.ImageAnnotatorClient()
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'ServiceAccToken.JSON'
 
+def detect_labels(path):
+    """Detects labels in the file."""
+    from google.cloud import vision
+    client = vision.ImageAnnotatorClient()
 
-
-def detectEmotion(FILE_PATH):
-    with io.open(FILE_PATH, 'rb') as image_file:
+    # [START vision_python_migration_label_detection]
+    with open(path, "rb") as image_file:
         content = image_file.read()
 
-    image = vision_v1.Image(content=content)
-    response = client.face_detection(image=image)
-    faceAnnotation = response.face_annotations
-    
-    likehood = ('UNKNOWN', 'VERY UNLIKELY', 'UNLIKELY', 'POSSIBLY', 'LIKELY', 'VERY LIKELY')
+    image = vision.Image(content=content)
 
-    print(f"Found {len(faceAnnotation)} face.")
-    for face in faceAnnotation:
-        print(f"Faces:")
-        print(f'    Detection confidence : {round(face.detection_confidence * 100, 2)}')
-        print(f'    Angry                : {likehood[face.anger_likelihood]}')
-        print(f'    Joy                  : {likehood[face.joy_likelihood]}')
-        print(f'    Sorrow               : {likehood[face.sorrow_likelihood]}')
-        print(f'    Sup                  : {likehood[face.surprise_likelihood]}')
-        print(f'    Headwear             : {likehood[face.headwear_likelihood]}')
-        print()
+    response = client.label_detection(image=image)
+    labels = response.label_annotations
+    print("Labels:")
 
-img_name = 'StartUp.jpg'
-file_path = f'./Faces/{img_name}'
-detectEmotion(file_path)
+    for label in labels:
+        print(label.description)
+
+    if response.error.message:
+        raise Exception(
+            "{}\nFor more info on error messages, check: "
+            "https://cloud.google.com/apis/design/errors".format(response.error.message)
+        )
+
+img_name = 'sky.jpg'
+file_path = f'./resources/{img_name}'
+detect_labels(file_path)
