@@ -1,24 +1,22 @@
-import os, io
-
+import os
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'ServiceAccToken.JSON'
 
-def detect_labels(path):
-    """Detects labels in the file."""
+def detect_texts(path):
     from google.cloud import vision
     client = vision.ImageAnnotatorClient()
-
-    # [START vision_python_migration_label_detection]
     with open(path, "rb") as image_file:
         content = image_file.read()
 
     image = vision.Image(content=content)
-
-    response = client.label_detection(image=image)
-    labels = response.label_annotations
-    print("Labels:")
-
-    for label in labels:
-        print(label.description)
+    response = client.text_detection(image=image)
+    texts = response.text_annotations
+    print("Texts:")
+    for text in texts:
+        print(f'\n"{text.description}"')
+        vertices = [
+            f"({vertex.x},{vertex.y})" for vertex in text.bounding_poly.vertices
+        ]
+        print("bounds: {}".format(",".join(vertices)))
 
     if response.error.message:
         raise Exception(
@@ -26,6 +24,6 @@ def detect_labels(path):
             "https://cloud.google.com/apis/design/errors".format(response.error.message)
         )
 
-img_name = 'sky.jpg'
+img_name = 'text.jpg'
 file_path = f'./resources/{img_name}'
-detect_labels(file_path)
+detect_texts(file_path)
