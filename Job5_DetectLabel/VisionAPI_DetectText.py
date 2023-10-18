@@ -24,6 +24,6 @@ def detect_texts(path):
             "https://cloud.google.com/apis/design/errors".format(response.error.message)
         )
 
-img_name = 'logos.jpg'
+img_name = 'text.jpg'
 file_path = f'./resources/{img_name}'
 detect_texts(file_path)

@@ -25,6 +25,6 @@ def detectEmotion(FILE_PATH):
     cv2.imwrite(output_file, image_cv2)
     print(f"Writing to file {output_file}")
 
-image_path = './faces/Vagabond_2019.jpg'
+image_path = './faces/ParkSeoJoon.jpg'
 detectEmotion(image_path)
 
