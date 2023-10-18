@@ -1,10 +1,10 @@
-import os, io
+import os
+from google.cloud import vision
+
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'ServiceAccToken.JSON'
+client = vision.ImageAnnotatorClient()
 
 def detect_properties(image_path_or_uri):
-    from google.cloud import vision
-    client = vision.ImageAnnotatorClient()
-
     if image_path_or_uri.startswith("http://") or image_path_or_uri.startswith("https://"):
         image = vision.Image()
         image.source.image_uri = image_path_or_uri
@@ -24,18 +24,6 @@ def detect_properties(image_path_or_uri):
         print(f"\tb: {color.color.blue}")
         print(f"\ta: {color.color.alpha}")
 
-    if response.error.message:
-        raise Exception(
-            "{}\nFor more info on error messages, check: "
-            "https://cloud.google.com/apis/design/errors".format(response.error.message)
-        )
-
-# Sử dụng hàm detect_properties với đối số là đường dẫn cục bộ hoặc URL
+img_path = f'./resources/recycle.jpg'
+detect_properties(img_path)
 detect_properties("https://nv.edu.vn/wp-content/uploads/2021/01/Nhat-Ban-dat-nuoc-mat-troi-moc-1.jpg")
-
-
-# img_path = f'./resources/recycle.jpg'
-# detect_properties(img_path)
-detect_properties("https://nv.edu.vn/wp-content/uploads/2021/01/Nhat-Ban-dat-nuoc-mat-troi-moc-1.jpg")
-
-print("Ha Quang Dung")
