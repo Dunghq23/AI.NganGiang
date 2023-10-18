@@ -37,3 +37,5 @@ detect_properties("https://nv.edu.vn/wp-content/uploads/2021/01/Nhat-Ban-dat-nuo
 # img_path = f'./resources/recycle.jpg'
 # detect_properties(img_path)
 detect_properties("https://nv.edu.vn/wp-content/uploads/2021/01/Nhat-Ban-dat-nuoc-mat-troi-moc-1.jpg")
+
+print("Ha Quang Dung")
