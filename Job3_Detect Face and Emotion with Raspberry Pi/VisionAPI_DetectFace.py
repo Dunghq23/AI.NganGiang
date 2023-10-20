@@ -6,7 +6,7 @@ import os, io
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'ServiceAccToken_ChuThang.JSON'
 client = vision_v1.ImageAnnotatorClient()
 
-def detectEmotion(FILE_PATH):
+def detectFace(FILE_PATH):
     with io.open(FILE_PATH, 'rb') as image_file:
         content = image_file.read()
     image = vision_v1.Image(content=content)
@@ -26,5 +26,5 @@ def detectEmotion(FILE_PATH):
     print(f"Writing to file {output_file}")
 
 image_path = './faces/ParkSeoJoon.jpg'
-detectEmotion(image_path)
+detectFace(image_path)
 
