@@ -1,9 +1,9 @@
 ﻿GOOGLE VISION API WITH 
 
 RASPBERRY PI 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.001.jpeg)
-</div>
+
 GOOGLE VISION API WITH RASPBERRY PI 
 
 MỤC LỤC 
@@ -144,42 +144,42 @@ CHƯƠNG 4: NHẬN DẠNG HÌNH ẢNH BẰNG GOOGLE VISION 2 ...................
 4. Kết quả nhận được ................................................................................................ 68 
 
 CHƯƠNG 1: MÔI TRƯỜNG PHÁT TRIỂN RASPBERRY CHO AI VISION 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.002.jpeg)
-</div>
+
 1. Giới thiệu về Raspberry PI 
 
 Raspberry Pi (viết tắt là "RasPi") là một máy tính kích thước một thẻ tín dụng, được phát triển bởi Raspberry Pi Foundation ở Vương quốc Anh. Nó được thiết kế để cung cấp một nền tảng giá rẻ và dễ dàng sử dụng cho việc học lập trình và thực hiện các dự án điện tử. Raspberry Pi sử dụng một phiên bản của hệ điều hành Linux (thường là Raspbian hoặc Raspberry Pi OS) và có các cổng kết nối để kết nối với màn hình, bàn phím, chuột và các thiết bị ngoại vi khác. 
 
 Raspberry Pi đã trở thành một công cụ phổ biến cho việc học lập trình, phát triển phần mềm, xây dựng dự án IoT (Internet of Things), và tạo ra các ứng dụng sáng tạo. Nó có sẵn ở nhiều phiên bản với sự nâng cấp về hiệu suất và tính năng, và có một cộng đồng đông đảo của người dùng và nhà phát triển trên khắp thế giới. Raspberry Pi cung cấp một cơ hội học hỏi và thử nghiệm công nghệ mới một cách tiết kiệm và thú vị. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.003.jpeg)
-</div>
+
 2. Chuẩn bị phần cứng 
 
 Để cài đặt Raspberry Pi, bạn cần chuẩn bị các điều kiện sau: 
 
 
 
-|Thiết bị Raspberry Pi |Bạn cần có một board <div style="text-align: center;">Raspberry Pi, ví dụ như Raspberry Pi 4, Raspberry Pi 3, hoặc Raspberry Pi Zero. Lựa chọn board cụ thể phụ thuộc vào mục đích sử dụng của bạn. |![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.004.jpeg)|</div>
-| :- | - | - |<div style="text-align: center;">
-|Thẻ microSD |Bạn cần một thẻ microSD có dung lượng ít nhất 8GB hoặc lớn hơn. Thẻ này sẽ được sử dụng để lưu hệ điều hành và dữ liệu của bạn. |![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a</div>485-4673fc99d8bc.005.jpeg)|<div style="text-align: center;">
-|Adapter nguồn |Cần một adapter nguồn micro USB có điện áp phù  hợp với board Raspberry Pi  bạn đang sử dụng. |![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.006.jpeg)|</div>
+|Thiết bị Raspberry Pi |Bạn cần có một board Raspberry Pi, ví dụ như Raspberry Pi 4, Raspberry Pi 3, hoặc Raspberry Pi Zero. Lựa chọn board cụ thể phụ thuộc vào mục đích sử dụng của bạn. |![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.004.jpeg)|
+| :- | - | - |
+|Thẻ microSD |Bạn cần một thẻ microSD có dung lượng ít nhất 8GB hoặc lớn hơn. Thẻ này sẽ được sử dụng để lưu hệ điều hành và dữ liệu của bạn. |![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.005.jpeg)|
+|Adapter nguồn |Cần một adapter nguồn micro USB có điện áp phù  hợp với board Raspberry Pi  bạn đang sử dụng. |![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.006.jpeg)|
 
-|Bàn phím và chuột (tùy chọn) |Nếu bạn định sử dụn<div style="text-align: center;">g Raspberry Pi như một máy tính cá nhân, bạn sẽ cần bàn phím và chuột để tương tác với nó. Bạn cũng có thể sử dụng bàn phím và chuột không dây. |![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.007.jpeg)|</div>
-| :-: | - | - |<div style="text-align: center;">
-|Màn hình (tùy chọn) |Nếu bạn không sử dụng SSH để điều khiển từ xa, bạn cần một màn hình để kết nối với Raspberry Pi. |![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.008.j</div>peg)|<div style="text-align: center;">
-|Máy tính khác |Bạn  cần  một  máy  tính  khác  để  tạo  thẻ microSD và tải hệ điều hành cho Raspberry Pi. |![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.009.jpeg)|</div>
-|Hệ điề<div style="text-align: center;">u hành Raspberry Pi |Bạn cần tải hệ điều hành cho Raspberry Pi, ví  dụ  như  Raspberry  Pi  OS,  Ubuntu, Raspbian, hoặc các biến thể khác. |![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.010.png)|
-</div>
+|Bàn phím và chuột (tùy chọn) |Nếu bạn định sử dụng Raspberry Pi như một máy tính cá nhân, bạn sẽ cần bàn phím và chuột để tương tác với nó. Bạn cũng có thể sử dụng bàn phím và chuột không dây. |![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.007.jpeg)|
+| :-: | - | - |
+|Màn hình (tùy chọn) |Nếu bạn không sử dụng SSH để điều khiển từ xa, bạn cần một màn hình để kết nối với Raspberry Pi. |![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.008.jpeg)|
+|Máy tính khác |Bạn  cần  một  máy  tính  khác  để  tạo  thẻ microSD và tải hệ điều hành cho Raspberry Pi. |![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.009.jpeg)|
+|Hệ điều hành Raspberry Pi |Bạn cần tải hệ điều hành cho Raspberry Pi, ví  dụ  như  Raspberry  Pi  OS,  Ubuntu, Raspbian, hoặc các biến thể khác. |![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.010.png)|
+
 3. Cài đặt hệ điều hành 
 1. Cài đặt Raspbian 
 1. Cài đặt SD Card Formatter 
 
 Ứng dụng SD Card Formatter là một công cụ giúp bạn định dạng thẻ SD một cách dễ dàng và hiệu quả. Điều này có thể hữu ích khi bạn muốn chuẩn bị lại thẻ SD để sử dụng cho mục đích khác hoặc khi thẻ SD của bạn gặp vấn đề và bạn muốn định dạng lại nó để khắc phục lỗi.  
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.011.jpeg)
-</div>
+
 Hướng dẫn cài đặt và sử dụng SD Card Formatter: 
 
 Bước 1: Tải và cài đặt SD Card Formatter 
@@ -195,15 +195,15 @@ Sử dụng đầu đọc thẻ SD hoặc khe cắm SD trên máy tính để g�
 Bước 3: Khởi động SD Card Formatter 
 
 Mở ứng dụng sau khi cài xong, có thể 1 số trường hợp cần cấp quyền administrator để chạy ứng dụng 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.012.jpeg)
-</div>
+
 Bước 4: Chọn thiết bị và định dạng: 
 
 Trong giao diện của SD Card Formatter, ứng dụng sẽ hiển thị danh sách các thiết bị lưu trữ ngoại vi đã kết nối với máy tính. Cần chắc chắn chọn đúng thẻ SD muốn định dạng. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.013.jpeg)
-</div>
+
 Sau đó nhấn vào nút Format (Định dạng) để bắt đầu quá trình định dạng của thẻ SD, trong quá trình này, tất cả dữ liệu trên thẻ SD sẽ bị xóa. 
 
 Bước 5: Hoàn tất định dạng 
@@ -217,73 +217,73 @@ Lưu ý quan trọng: Hãy cẩn thận khi sử dụng SD Card Formatter, vì n
 Truy  cập  trang  web  chính  thức  của  Raspberry  Pi  Foundation  tại https://www.raspberrypi.com/software/operating-systems  
 
 Trang web này cung cấp danh sách các hệ điều hành khác nhau dành cho Raspberry Pi. Tiếp theo chọn hệ điều hành muốn cài đặt. Raspberry Pi OS (Trước đây là Raspbian) là một lựa chọn phổ biến cho người mới bắt đầu. Chọn bản Raspberry Pi OS with desktop 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.014.jpeg)
-</div>
+
 Giải nén tệp đã tải xuống sẽ tạp một tệp hình ảnh (.img) có cùng tên. Tuy nhiên, ta cần cài thêm Win32 Disk Imager để có thể ghi được hệ điều hành vào thẻ nhớ  
 
 3. Cài đặt Win32 Disk Imager 
 
 Win32 Disk Imager là ứng dụng miễn phí và mã nguồn mở được sử dụng để ghi hệ điều hành và dữ liệu lên các thiết bị lưu trữ ngoại vi như thẻ SD hoặc USB. Đây là công cụ phổ biến để cài đặt hệ điều hành như (Raspberry Pi OS, Ubuntu, Windows IoT Core) lên thẻ SD cho các dự án IoT hoặc để tạo bản sao dự phòng trên thẻ SD. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.015.jpeg)
-</div>
+
 Cách cài đặt Win32 Disk Imager: 
 
 Bước 1: Tải Win32 Disk Imager 
 
 Truy cập trang web chính thức của Win32 Disk Imager tại đây. Trang web này chức các phiên bản mới nhất của Win32 Disk Imager. Hãy tìm và tải xuống phiên bản phù hợp với hệ điều hành của bạn.
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.016.jpeg)
-</div>
+
 Bước 2: Cài đặt Win32 Disk Imager 
 
 Khi tải xong, bạn hãy mở tệp đã tải xuống. Trong quá trình cài đặt, bạn sẽ được hỏi về vị trí cài đặt và tùy chọn cài đặt khác, hãy làm theo hướng dẫn trên màn hình để hoàn tất quá trình cài đặt. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.017.jpeg)
-</div>
+
 Hình 1: Chấp nhận giấy phép và tiếp tục nhấn vào next 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.018.jpeg)
-</div>
+
 Hình 2: Lựa chọn thư mục để cài đặt và chọn next 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.019.jpeg)
-</div>
+
 Hình 3: Lựa chọn thư mục Start menu và tiếp tục next 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.020.jpeg)
-</div>
+
 Hình 4: Lựa chọn thêm một biểu tượng lối tắt vào màn hình desktop rồi tiếp tục chọn next 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.021.jpeg)
-<div style="text-align: center;"></div>
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.022.jpeg)
-</div>
+
 Hình 5: Kiểm tra nội dung đã cài đặt và nếu không phát sinh lỗi, tiếp tục quá trình 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.023.jpeg)
-</div>
+
 Hình 6: Tiếp tục quy trình cài đặt 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.024.jpeg)
-</div>
+
 Hình 7: Cài đặt hoàn tất 
 
 Bước 3: Khởi động chương trình 
 
 Sau khi cài đặt, chương trình sẽ tự động được chạy. Lắp thẻ nhớ micro SD vào đầu đọc thẻ nhớ, kết nối nó với máy tính và khởi động lại chương trình từ đường dẫn đã cài đặt. Tiếp tục chọn đúng đường dẫn file Raspberry Pi đã tải xuống ở hướng dẫn phần trước. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.025.jpeg)
-</div>
+
 Hình 1: Giao diện chọn đường dẫn
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.026.jpeg)
-</div>
+
 Hình 2: Một cửa sổ được tạo để xác nhận tiến trình, sau đó nhấp vào “Yes” 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.027.png)
-</div>
+
 Hình 3: Một cửa sổ hiện lên thông báo việc Ghi thành công 
 
 Khi đã ghi xong tệp, bấm OK để xác nhận và nhấn EXIT để thoát khỏi chương trình. Tháo thẻ nhớ để thực hiện các bước tiếp theo 
@@ -296,15 +296,15 @@ Có thể xây dựng môi trường mạng bằng cách kết nối cáp LAN v�
 1. Mạng có dây 
 
 Nếu sử dụng cáp, hãy cắm cổng LAN vào mạch Raspberry Pi và nó sẽ tự động được gán cho một địa chỉ IP. Tại thời điểm này, có thể kiểm tra xem liệu cài đặt mạng có được thực hiện bình thường hay không thông qua biểu tượng cài đặt mạng nằm ở góc bên phải. Đặt con trỏ chuột lên biểu tượng này để hiển thị IP được gán. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.028.png)
-</div>
+
 2. Wi-Fi 
 
 Nếu bạn đang sử dụng Wifi, hãy nhấp vào biểu tượng Cài đặt mạng nằm bên cạnh biểu tượng loa ở góc trên cùng bên phải và sẽ thấy danh sách Áp được nhận dạng qua Wifi tích hợp trong Raspberry Pi. Chọn AP muốn sử dụng từ danh sách và nhập mật khẩu cho trước (Mật khẩu AP có liên quan). Sau khi đặt lại con trỏ chuột trên biểu tượng cài đặt mạng, có thể kiểm tra SSID và địa chỉ IP được gán. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.029.jpeg)
-</div>
+
 5. Cài đặt Samba 
 
 Khi một mạng được thiết lập bằng hệ điều hành, việc chia sẻ tài nguyên có thể là cần thiết từ một ổ đĩa của PC hiện có. Ngay cả khi tại chương trình để điều khiển các thiết bị khác nhau của thiết bị gt – AI. Trước tiên phải sao chép và sử dụng thư viện đã tạo. Trong trường hợp này, một giao thức gọi là SAMBA được sử dụng để chia sẻ tệp từ các hệ thống khác nhau. 
@@ -316,67 +316,67 @@ Trong trường hợp này, chúng ta chia sẻ các tệp cho Windows cho Raspb
 1. Cài đặt Samba 
 
 Chạy Terminal bằng cách nhấp vào biểu tượng như bên dưới (Hoặc có thể dùng Terminal trong VS Code) 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.030.jpeg)
-</div>
+
 Cập nhật apt-get bằng câu lệnh: sudo apt-get update 
 
 Lệnh này cập nhật danh sách các package có sẵn và các phiên bản của chúng. Nó được sử dụng để kiểm tra và thông báo nếu gói có phiên bản mới hơn thay vì nâng cấp phiên bản. Vì các cập nhật được thực hiện thông qua internet, nên việc setup mạng cần được thực hiện trước. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.031.jpeg)
-</div>
+
 Nâng cấp apt-get update bằng cách gõ lệnh sau đây: sudo apt-get upgrate 
 
 Và tiếp tục chọn Y trong trường hợp được xác nhận Bạn có muốn tiếp tục không? [Y/n]. Lệnh này nâng cấp các gói lên phiên bản mới nhất. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.032.jpeg)
-</div>
+
 Cài gói samba bằng cách nhập lệnh: sudo apt-get install samba samba-common-bin 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.033.jpeg)
-</div>
+
 Tạo một thư mục mà bạn muốn chia sẻ. Ví dụ, tạo một thư mục có tên "Shared" bằng lệnh sau: 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.034.jpeg)
-</div>
+
 Sau đó, bạn cần cấu hình Samba để chia sẻ thư mục này. Mở tệp cấu hình Samba bằng lệnh: sudo nano /etc/samba/smb.conf 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.035.jpeg)
-</div>
+
 Tìm đoạn [global] và thêm dòng sau để cho phép chia sẻ thư mục trong Samba: 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.036.jpeg)
-</div>
+
 Cuối tệp cấu hình, thêm phần sau để định nghĩa thư mục chia sẻ: 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.037.jpeg)
-</div>
+
 Khi hoàn tất, nhấn Ctrl + X để thoát trình chỉnh sửa. Nếu nội dung được chỉnh sửa tại thời điểm này, trình chỉnh sửa sẽ xác nhận có lưu nội dung đã thay đổi hay không. Nhấn “y” để lưu nội dung và nhấn “Enter” để thoát. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.038.jpeg)
-</div>
+
 Sử dụng lệnh sau để đặt ID người dùng và mật khẩu để được sử dụng khi kết nối với Samba. ID người dùng được đặt thành pi và mật khẩu là tự đặt. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.039.jpeg)
-</div>
+
 Chạy lại samba để áp dụng các cài đặt: sudo systemctl restart smbd 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.040.jpeg)
-</div>
+
 Bây giờ, ta có thể truy cập thư mục share của Raspberry Pi bằng máy tính cá nhân như sau. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.041.jpeg)
-</div>
+
 2. Truy cập tài nguyên được chia sẻ 
 
 Mở Windows Explorer và nhập địa chỉ IP mạng được gán trong trường thư mục trên để truy cập thư mục đã chia sẻ của Raspberry Pi. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.042.jpeg)
-</div>
+
 Khi kết nối, sử dụng ID và mật khẩu đã đặt, và khi đó có thể được tạo, sửa đổi, sao chép và xóa file trong thư mục. (Nhấp chọn vào Remember my credentials) nếu không muốn nhập  mật khẩu trong các lần tiếp theo. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.043.jpeg)
-</div>
+
 Nếu truy cập vào thư mục chia sẻ không được trơn tru, hãy kiểm tra IP được gán và kiểm tra xem IP được gán có được kết nối đúng với mạng thông qua kiểm tra ping hay không. Kiểm tra Ping bằng cách nhập “ping [ip\_address]” trong cửa sổ lệnh của mỗi thiết bị. 
 
 6. Giới thiệu về GPIO 
@@ -396,9 +396,9 @@ Có thể dễ dàng tìm thấy 40 chân trên bảng bo mạch Raspberry Pi. C
 - Chân PWR 3,3V: 2 EA 
 - Chân GND: 8 EA 
 - Chân riêng: 2 EA (E2C ID EEPROM) 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.044.jpeg)
-</div>
+
 7. Cài đặt thư viện GPIO 
 
 Có nhiều ngôn ngữ được sử dụng để điều khiển GPIO của Raspberry Pi, bao gồm C, C++, Java, Python và người dùng viết và chia sẻ thư viện cho mỗi ngôn ngữ. Các chương trình Raspberry Pi chủ yếu sử dụng Python và C, và các thư viện thì đã được cài đặt trong HĐH. Chúng tôi sẽ đề cập đến việc cài đặt và lập trình các thư viện Python sau trong cuốn sách này, vì vậy trong chương này chúng ta sẽ tìm hiểu cách sử dụng WiringPi  để kiểm soát GPIO bằng C. 
@@ -412,50 +412,50 @@ WiringPi  được duy trì bởi “GIT”. GIT là một hệ thống kiểm s
 1. Cài đặt GIT 
 
 Cài đặt GIT bằng lệnh sau: 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.045.png)
-</div>
+
 2. Tải xuống thư viện WiringPi  
 
 Tải thư viện WiringPi  từ GIT bằng lệnh sau. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.046.jpeg)
-</div>
+
 3. Xây dựng thư viện WiringPi  
 
 Xây dựng thư viện WiringPi bằng lệnh sau. Điều hướng đến thư mục đã giải nén để build. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.047.png)
-</div>
+
 Việc xây dựng khi tiến hành có thể thấy các lệnh sau:. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.048.jpeg)
-</div>
+
 4. Xác nhận việc cài đặt 
 
 Kiểm tra việc cài đặt thư viện WiringPi bằng lệnh sau. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.049.png)
-</div>
+
 Trong mục Raspberry Pi Detail, có thể thấy rằng model Raspberry Pi là khớp và phiên bản WiringPi khác nhau được yêu cầu tùy thuộc vào kiểu máy và phiên bản. Sau khi WiringPi được cài đặt, có thể kiểm tra sơ đồ chân của Raspberry Pi bằng lệnh sau. Đó là một ý tưởng tốt để làm quen với các lệnh vì sẽ thường phải kiểm tra số chân GPIO khi viết chương trình. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.050.jpeg)
-</div>
+
 8. Hướng dẫn phát triển hệ thống 
 1. Viết chương trình 
 1. Dịch chương trình 
 1. Chạy chương trình 
 
 CHƯƠNG 2: NHẬN DẠNG HÌNH ẢNH BẰNG GOOGLE VISION 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.051.jpeg)
-</div>
+
 1. Giới thiệu về Google Vision 
 
 Google Cloud Vision là một dịch vụ trí tuệ nhân tạo (AI) được cung cấp bởi Google Cloud Platform (GCP) cho phép bạn phân tích và hiểu nội dung trong hình ảnh và video. Dịch vụ này sử dụng các thuật toán học máy và thị giác máy tính để hiểu và trích xuất thông tin từ hình ảnh, giúp tự động phân loại, nhận dạng và phân tích nội dung hình ảnh. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.052.png)
-</div>
+
 API Google Cloud Vision: API này là một phần quan trọng của dịch vụ, cho phép bạn tích hợp dịch vụ Vision vào ứng dụng của mình. API cho phép bạn gửi hình ảnh và video để phân tích và nhận kết quả trả về từ dịch vụ. 
 
 Các chức năng phân tích hình ảnh: 
@@ -538,17 +538,17 @@ Thành phần của sản phẩm như sau.
 - Loa (giắc cắm analog 3,5 mm, bao gồm cáp Micro USB) 
 
 Hình dưới đây cho thấy các thiết bị và hình thức giao diện của sản phẩm: 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.053.jpeg)
-<div style="text-align: center;"></div>
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.054.jpeg)
-<div style="text-align: center;"></div>
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.055.jpeg)
-</div>
+
 1. Cấu hình hệ thống nhận dạng AI 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.056.jpeg)
-</div>
+
 Hệ thống nhận dạng hình ảnh thường được xây dựng như sau: 
 
 - Thiết bị nhận dạng hình ảnh (Raspberry Pi) 
@@ -563,9 +563,9 @@ Camera nhận dạng hình ảnh hoặc video chụp được và xử lý nó t
 Như đã đề cập trước đó, bo mạch nền AI được cấu hình để giao diện bộ xử lý với các cảm biến và bộ truyền động hoặc thông qua cáp jumper. Các chân GPIO của Raspberry Pi có thể chọn kết nối mạch tới các cảm biến và bộ truyền động bằng một công tắc được gắn trên bảng mạch. 
 
 Cấu hình của công tắc như sau: 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.057.jpeg)
-</div>
+
 - Điều chỉnh thấp/cao của công tắc #2 (SW2) cho phép kết nối mạch với từng thiết bị (cảm biến và bộ truyền động) trên bo mạch. 
 - Nếu được đặt thành HIGH, thiết bị trên bảng được kết nối với mạch. Trong trường hợp LOW, đầu nối điều khiển cảm biến (Ổ cắm Header) được cấu hình để kết nối dây jumper trên bảng mạch. Tất nhiên, một cảm biến hoặc bộ truyền động riêng biệt có thể được kết nối với đầu nối Raspberry Pi để điều khiển. 
 - Nếu được đặt thành HIGH, không kết nối với dây jumper vì có thể xảy ra đoản mạch. 
@@ -583,23 +583,23 @@ Cấu hình của công tắc như sau:
 1. Tạo dự án Google Vision API:  
 
 Bước 1: Truy cập Google Cloud để có thể lấy được API. https://console.cloud.google.com  
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.058.jpeg)
-</div>
+
 Lưu ý: Cần chọn vào Start Free( Bắt đầu dùng thử), thêm thông tin thanh toán. Thêm thẻ visa. Khi thành công hệ thống sẽ trừ tài khoản 1$ và sẽ hoàn lại ngay sau đó 
 
 Bước 2: Nhấp chọn vào Google Vision API như hình bên dưới 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.059.jpeg)
-</div>
+
 Rồi nhấp chọn vào New project 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.060.jpeg)
-</div>
+
 Đặt tên cho project rồi nhấn CREATE 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.061.jpeg)
-</div>
+
 2. Cài đặt Client Library 
 
 Để cài đặt môi trường ảo trên Raspberry Pi, bạn có thể sử dụng một số công cụ phổ biến như Virtualenv hoặc venv (được tích hợp sẵn trong Python 3). Dưới đây là cách bạn có thể thực hiện điều này: 
@@ -607,17 +607,17 @@ Rồi nhấp chọn vào New project
 1. Cài đặt Python 3 (nếu chưa có): 
 
 Đảm bảo bạn đã cài đặt Python 3 trên Raspberry Pi. Một số phiên bản mới nhất của Raspberry Pi đã đi kèm với Python 3 sẵn, nhưng nếu không có, bạn có thể cài đặt bằng lệnh sau: 
-<div style="text-align: center;">
+
 sudo apt-get update ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.062.png)
-</div>
+
 sudo apt-get install python3 
 
 2. Cài đặt pip (nếu chưa có): 
 
 Pip là công cụ quản lý gói Python, bạn cần cài đặt nó nếu chưa có. Bạn có thể cài đặt pip bằng cách chạy lệnh sau: 
-<div style="text-align: center;">
+
 sudo apt-get install python3-pip ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.063.png)
-</div>
+
 3. Cài đặt virtualenv 
 
 Trước khi cài đặt Client Library, hãy định cấu hình môi trường ảo bằng virtualenv. Virtualenv (“môi trường ảo”) là một công cụ để tạo một môi trường Python riêng biệt. Môi trường biệt lập này cho phép cài đặt một phiên bản riêng của gói Python, cho phép tách các dự án khỏi phụ thuộc vào các dự án khác.  
@@ -627,117 +627,117 @@ Trước khi cài đặt Client Library, hãy định cấu hình môi trường
 pip install virtualenv ![ref1]
 
 Trong trường hợp gặp lỗi như dưới đây 
-<div style="text-align: center;">
-![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.065.jpeg)Lỗi gặp phải có thể là do sự không khớp giữa tệp băm sha256 và phiên bản của gói virtualenv bạn đang c</div>ố gắng cài đặt. Điều này có thể xảy ra khi gói tải về bị thay đổi hoặc không tải xuống đúng phiên bản. 
+
+![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.065.jpeg)Lỗi gặp phải có thể là do sự không khớp giữa tệp băm sha256 và phiên bản của gói virtualenv bạn đang cố gắng cài đặt. Điều này có thể xảy ra khi gói tải về bị thay đổi hoặc không tải xuống đúng phiên bản. 
 
 Để giải quyết vấn đề này, bạn có thể thử làm theo các bước sau: 
 
 1) Xóa tệp cache của pip: 
-<div style="text-align: center;">
+
 pip cache purge ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.066.png)
-<div style="text-align: center;"></div>
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.067.jpeg)
-</div>
+
 2) Thực hiện lại câu lệnh cài đặt virtualenv như vừa rồi 
-<div style="text-align: center;">
+
 pip install virtualenv ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.068.png)
-<div style="text-align: center;"></div>
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.069.jpeg)
-</div>
+
 4. Tạo một môi trường ảo có tên là "ai-env" sử dụng Python 3 
 
 Virtualenv tạo một bản sao ảo của toàn bộ cài đặt Python trong thư mục ai-env. Khi bản sao được tạo, cần “bật” virtualenv.  
-<div style="text-align: center;">
+
 virtualenv --pythonpython3 ai-env ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.070.png)
-<div style="text-align: center;"></div>
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.071.jpeg)
-</div>
+
 5. Kích hoạt môi trường ảo 
 
 Việc kích hoạt virtualenv khiến shell sử dụng đường dẫn của virtualenv tới Python. 
-<div style="text-align: center;">
+
 source ai-env/bin/activate ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.072.png)
-<div style="text-align: center;"></div>
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.073.jpeg)
-</div>
+
 Bây giờ có thể cài đặt gói và gói đã cài đặt sẽ không ảnh hưởng đến các dự án hoặc cài đặt Python toàn cầu khác. 
 
 - Lưu ý rằng nếu muốn ngừng sử dụng virtualenv và quay lại Python toàn cầu thì có thể tắt nó. 
-<div style="text-align: center;">
+
 deactivate ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.074.png)
-</div>
+
 6. Cài đặt Client Library 
 
 Cài đặt Client Library bằng cách nhập lệnh sau trong terminal. 
 
 sudo pip install --upgrade google-cloud-vision ![ref1]
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.075.jpeg)
-</div>
+
 Nếu thấy một thông báo cảnh báo cho phiên bản pip, hãy nhập thông tin sau để tiến hành nâng cấp pip: Sau đó tiến hành cài đặt Client Library trước. 
-<div style="text-align: center;">
+
 sudo pip install –upgrade pip ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.076.png)
-<div style="text-align: center;"></div>
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.077.jpeg)
-</div>
+
 Trường hợp bị lỗi như trên hãy thử cách dưới đây 
 
 1) Xóa tệp hashes của pip: Bạn có thể thử xóa tệp hashes của pip bằng cách chạy lệnh sau: 
-<div style="text-align: center;">
+
 rm -r ~/.cache/pip ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.078.png)
-</div>
+
 2) Tiếp tục chạy câu lệnh sudo pip install --upgrade pip . Nếu vẫn lỗi hãy chạy câu lệnh dưới đây 
-<div style="text-align: center;">
-sudo pip install --upgrade --trusted-host www.piwheels.org --trusted-host pypi.org - -trusted-host pypi.python.org pip ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-467</div>3fc99d8bc.079.png)
-<div style="text-align: center;">
+
+sudo pip install --upgrade --trusted-host www.piwheels.org --trusted-host pypi.org - -trusted-host pypi.python.org pip ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.079.png)
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.080.jpeg)
-</div>
+
 7. Xác thực tài khoản 
 
 Để chạy Google Client Library, cần thiết lập xác thực bằng cách tạo tài khoản dịch vụ và đặt các biến môi trường. Vì xác thực đã được hoàn thành, thông tin biến người dùng được cung cấp cho mã ứng dụng bằng cách đặt biến môi trường GOOGLE\_APPLICATION\_CREDENTIALS. Đầu tiên, đặt đường dẫn và tên tệp của tệp json chứa khóa đã tải xuống. Biến này chỉ áp dụng cho phiên shell hiện tại, vì vậy hãy đặt lại nó khi mở một phiên mới. 
 
 Ví dụ: để xác thực ứng dụng Google, hãy thêm đường dẫn của tệp xác thực như sau. Tên và đường dẫn của tệp Json có thể được thay đổi tùy thuộc vào cấu hình. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.081.jpeg)
-<div style="text-align: center;"></div>
-export GOOGLE\_APPLICATION\_CREDENTIALS="/home/pi/Desktop/Shared/Job4/ai- env/ServiceAccToken.JSON" ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d</div>8bc.082.png)
+
+export GOOGLE\_APPLICATION\_CREDENTIALS="/home/pi/Desktop/Shared/Job4/ai- env/ServiceAccToken.JSON" ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.082.png)
 
 3. Chạy thử 
 
 Bây giờ có thể sử dụng Vision để yêu cầu thông tin như phát hiện nhãn từ hình ảnh. 
-<div style="text-align: center;">
+
 git clone https://github.com/GoogleCloudPlatform/python-docs-samples/ ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.083.png)
-<div style="text-align: center;"></div>
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.084.jpeg)
-</div>
+
 Cài đặt các thư viện sau: 
 
 pip install Pillow ![ref2]
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.086.jpeg)
-</div>
+
 Đi theo các đường dẫn sau và cài đặt các thư viện có liên quan: 
-<div style="text-align: center;">
-cd python-docs-samples/vision/snippets/detect sudo pip install -r requirements.txt ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d</div>8bc.087.png)
+
+cd python-docs-samples/vision/snippets/detect sudo pip install -r requirements.txt ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.087.png)
 
 Ví dụ chạy thử Detect Text bằng câu lệnh sau: python detect.py text resources/text.jpg 
 
 Kết quả nhận được: 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.088.jpeg)
-</div>
+
 Ví dụ chạy thử Detect Face bằng câu lệnh sau: python detect.py faces resources/face\_no\_surprise.jpg 
 
 Kết quả nhận được: 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.089.jpeg)
-</div>
+
 CHƯƠNG 3: NHẬN DẠNG HÌNH ẢNH BẰNG GOOGLE VISION 1 
 
 1. Phát hiện nhãn 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.090.jpeg)
-</div>
+
 1. Giới thiệu phát hiện nhãn 
 
 Phát hiện nhãn là một tính năng phát hiện rộng các danh mục từ hình ảnh đến phương tiện vận chuyển đến động vật. Khi phát hiện danh mục được thực hiện, hình ảnh được phân tích và thông tin được nhận ra trong hình ảnh được dán nhãn và xuất ra. Ví dụ, trong trường hợp hình ảnh của một tòa nhà, nhiều thông tin khác nhau được hiển thị, chẳng hạn như tòa nhà nào được đặt và những gì xung quanh tòa nhà. 
@@ -747,30 +747,30 @@ Phát hiện nhãn là một tính năng phát hiện rộng các danh mục t�
 Sử dụng Google Vision API để thực hiện phát hiện thuộc tính hình ảnh trên hình ảnh. Trong thiết bị đầu cuối hãy di chuyển, điều hướng đến thư mục thực hiện dự án. 
 
 Chúng ta cần cài đặt các thư viện cần thiết cho mã nguồn chương trình thông qua câu lệnh: sudo pip install -r requirements.txt . Trong đó, requirements.txt là tệp tin chứa thông tin thư viện cần cài đặt như bên dưới: 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.091.jpeg)
-</div>
+
 - Chuẩn bị kho chứa hình ảnh 
 
 Tạo ra thư mục có tên resources để chứa hình ảnh 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.092.jpeg)
-</div>
+
 3. Hướng dẫn chi tiết mã nguồn 
 1. Import các thư viện cần thiết 
-<div style="text-align: center;">
+
 import os ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.093.png)
-</div>
+
 from google.cloud import vision 
 
 - os để cho phép tương tác với hệ điều hành 
 - google.cloud.vision: Thư viện cho Google Cloud Vision API. 
 2. Thiết lập thông tin xác thực 
-<div style="text-align: center;">
-os.environ['GOOGLE\_APPLICATION\_CREDENTIALS'] = 'ServiceAccToken.JSON' ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.094.png)</div>
 
-- Đoạn mã này sử dụng một tệp JSON chứa thông tin xác thực để gọi API của<div style="text-align: center;"> Google Cloud Vision. 
-3. Khởi tạo client của Vision API client = vision.ImageAnnotatorClient() ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.095.png)</div>
+os.environ['GOOGLE\_APPLICATION\_CREDENTIALS'] = 'ServiceAccToken.JSON' ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.094.png)
+
+- Đoạn mã này sử dụng một tệp JSON chứa thông tin xác thực để gọi API của Google Cloud Vision. 
+3. Khởi tạo client của Vision API client = vision.ImageAnnotatorClient() ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.095.png)
 - Đoạn mã này tạo một đối tượng client để tương tác với Google Cloud Vision API. 
 4. Định nghĩa hàm detect\_labels(path) 
 
@@ -793,17 +793,17 @@ image = vision.Image(content=content) response = client.label\_detection(image=i
 - Bước 4: Trích xuất các nhãn từ phản hồi (Các nhãn được phát hiện từ phản hồi API sẽ được lưu trong biến labels) 
 - Bước 5: In các nhãn đã phát hiện 
 5. Sử dụng hàm 
-<div style="text-align: center;">
+
 img\_name = 'logos.jpg' ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.096.png)
-</div>
+
 file\_path = f'./resources/{img\_name}' detect\_labels(file\_path) 
 
 Biến img\_name sẽ là tên tệp hình ảnh và xây dựng đường dẫn đường dẫn đầy đủ đường dẫn đến tệp bằng biến file\_path. Sau đó sẽ gọi hàm detect\_labels với đường truyền dẫn tệp hình ảnh. 
 
 4. Chi tiết mã nguồn 
-<div style="text-align: center;">
+
 import os ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.097.png)
-</div>
+
 from google.cloud import vision 
 
 os.environ['GOOGLE\_APPLICATION\_CREDENTIALS'] = 'ServiceAccToken.JSON' 
@@ -827,13 +827,13 @@ img\_name = 'logos.jpg'
 file\_path = f'./resources/{img\_name}' detect\_labels(file\_path) 
 
 5. Kết quả nhận được 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.098.jpeg)
-</div>
+
 Khi lệnh được thực hiện, có thể thấy kết quả sau. Hiển thị nhãn của các nội dung phát hiện được trong hình ảnh: 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.099.jpeg)
-</div>
+
 2. Phát hiện văn bản 
 1. Giới thiệu phát hiện nhãn 
 
@@ -844,30 +844,30 @@ Phát hiện văn bản là một chức năng để thực hiện nhận dạng
 Sử dụng Google Vision API để thực hiện phát hiện thuộc tính hình ảnh trên hình ảnh. Trong thiết bị đầu cuối hãy di chuyển, điều hướng đến thư mục thực hiện dự án. 
 
 Chúng ta cần cài đặt các thư viện cần thiết cho mã nguồn chương trình thông qua câu lệnh: sudo pip install -r requirements.txt . Trong đó, requirements.txt là tệp tin chứa thông tin thư viện cần cài đặt như bên dưới: 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.100.jpeg)
-</div>
+
 - Chuẩn bị kho chứa hình ảnh 
 
 Tạo ra thư mục có tên resources để chứa hình ảnh 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.101.jpeg)
-</div>
+
 3. Hướng dẫn chi tiết mã nguồn 
 1. Import các thư viện cần thiết 
-<div style="text-align: center;">
+
 import os ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.102.png)
-</div>
+
 from google.cloud import vision 
 
 - os để cho phép tương tác với hệ điều hành 
 - google.cloud.vision: Thư viện cho Google Cloud Vision API. 
 2. Thiết lập thông tin xác thực 
-<div style="text-align: center;">
-os.environ['GOOGLE\_APPLICATION\_CREDENTIALS'] = 'ServiceAccToken.JSON' ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.103.png)</div>
 
-- Đoạn mã này sử dụng một tệp JSON chứa thông tin xác thực để gọi API của<div style="text-align: center;"> Google Cloud Vision. 
-3. Khởi tạo client của Vision API client = vision.ImageAnnotatorClient() ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.104.png)</div>
+os.environ['GOOGLE\_APPLICATION\_CREDENTIALS'] = 'ServiceAccToken.JSON' ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.103.png)
+
+- Đoạn mã này sử dụng một tệp JSON chứa thông tin xác thực để gọi API của Google Cloud Vision. 
+3. Khởi tạo client của Vision API client = vision.ImageAnnotatorClient() ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.104.png)
 - Đoạn mã này tạo một đối tượng client để tương tác với Google Cloud Vision API. 
 4. Định nghĩa hàm detect\_texts(path) 
 
@@ -878,9 +878,9 @@ def detect\_texts(path):
 image = vision.Image(content=content) response = client.text\_detection(image=image) texts = response.text\_annotations print("Texts:") 
 
 for text in texts: 
-<div style="text-align: center;">
+
 `        `print(f'\n"{text.description}"') ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.105.png)
-</div>
+
 `        `vertices = [ 
 
 `            `f"({vertex.x},{vertex.y})" for vertex in text.bounding\_poly.vertices         ] 
@@ -902,9 +902,9 @@ print(f'\n"{text.description}"'): In ra nội dung của đoạn văn bản đã
 print("bounds: {}".format(",".join(vertices)): In ra thông tin về vị trí của văn bản trên hình ảnh. 
 
 5. Sử dụng hàm 
-<div style="text-align: center;">
+
 img\_name = 'logos.jpg' ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.106.png)
-</div>
+
 file\_path = f'./resources/{img\_name}' detect\_texts(file\_path) 
 
 4. Chi tiết mã nguồn 
@@ -946,17 +946,17 @@ file\_path = f'./resources/{img\_name}' detect\_texts(file\_path)
 5. Kết quả nhận được 
 
 Khi lệnh được thực hiện, có thể thấy kết quả sau. Hiển thị văn bản được phát hiện và phạm vi kích thước của văn bản trong hình ảnh. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.107.jpeg)
-</div>
+
 Mã nguồn chương trình để phát hiện văn bản từ hình ảnh trong thư mục là như sau. Khởi tạo ứng dụng khách bằng cách nhập Thư viện Google Cloud Client. Tải tệp hình ảnh vào bộ nhớ và thực hiện phát hiện văn bản trên tệp hình ảnh.
 
 CHƯƠNG 4: NHẬN DẠNG HÌNH ẢNH BẰNG GOOGLE VISION 2 
 
 1. Nhận diện khuôn mặt 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.108.jpeg)
-</div>
+
 1. Mục đích đoạn mã 
 
 Đoạn mã Python này sử dụng Google Cloud Vision API để phát hiện các khuôn mặt trong một hình ảnh và sau đó vẽ hình vuông xung quanh từng khuôn mặt được phát hiện. Kết quả cuối cùng được lưu trong một hình ảnh mới. 
@@ -978,9 +978,9 @@ Sau đó sẽ gõ lệnh sau đây trên terminal: pip install -r requirements.t
 4. Hướng dẫn chi tiết 
 
 1\.2.1. Import các thư viện cần thiết 
-<div style="text-align: center;">
+
 import cv2 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.112.png)
-</div>
+
 from google.cloud import vision\_v1 import numpy as np 
 
 import os, io 
@@ -992,11 +992,11 @@ import os, io
 - google.cloud.vision\_v1: Thư viện này chứa các công cụ cho việc gửi hình ảnh đến Google Cloud Vision API và nhận kết quả. 
 
 1\.4.2. Thiết lập thông tin xác thực 
-<div style="text-align: center;">
-os.environ['GOOGLE\_APPLICATION\_CREDENTIALS'] = 'ServiceAccToken.JSON' ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.113.png)</div>
 
-- Đoạn mã này sử dụng một tệp JSON chứa thông tin xác thực để gọi API của<div style="text-align: center;"> Google Cloud Vision. 
-3. Khởi tạo client của Vision API client = vision.ImageAnnotatorClient() ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.114.png)</div>
+os.environ['GOOGLE\_APPLICATION\_CREDENTIALS'] = 'ServiceAccToken.JSON' ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.113.png)
+
+- Đoạn mã này sử dụng một tệp JSON chứa thông tin xác thực để gọi API của Google Cloud Vision. 
+3. Khởi tạo client của Vision API client = vision.ImageAnnotatorClient() ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.114.png)
 - Đoạn mã này tạo một đối tượng client để tương tác với Google Cloud Vision API. 
 4. Định nghĩa hàm detectFace(FILE\_PATH) 
 
@@ -1073,9 +1073,9 @@ Hàm duyệt qua danh sách faces (các khuôn mặt được phát hiện) và 
 Cuối cùng, hàm sử dụng cv2.imwrite(output\_file, image\_cv2) để lưu hình ảnh gốc với các hình chữ nhật đã vẽ xung quanh các khuôn mặt vào tệp "out.jpg". 
 
 5. Sử dụng hàm 
-<div style="text-align: center;">
+
 image\_path = './Faces/ParkSeoJoon.jpg' detectFace(image\_path) ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.115.png)
-</div>
+
 4. Chi tiết mã nguồn 
 
 import cv2 
@@ -1129,17 +1129,17 @@ detectFace(image\_path) ![ref2]
 5. Kết quả nhận được 
 
 Các khuôn mặt được phát hiện. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.116.jpeg)
-<div style="text-align: center;"></div>
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.117.jpeg)
-<div style="text-align: center;"></div>
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.118.jpeg).
-</div>
+
 2. Phát hiện biểu cảm khuôn mặt 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.119.jpeg)
-</div>
+
 1. Mục đích đoạn mã 
 
 Đoạn mã Python này sử dụng Google Cloud Vision API để phân tích một hình ảnh và phát hiện các khuôn mặt trong hình ảnh đó. Sau đó, nó đánh giá cảm xúc trên mỗi khuôn mặt, như cảm giác tức giận (angry), vui vẻ (joy), buồn (sorrow), ngạc nhiên (surprise), và việc đội mũ (headwear). Kết quả cuối cùng là việc hiển thị thông tin về cảm xúc trên mỗi khuôn mặt trong hình ảnh. 
@@ -1161,19 +1161,19 @@ Sau đó sẽ gõ lệnh sau đây trên terminal: pip install -r requirements.t
 4. Hướng dẫn chi tiết 
 
 2\.2.1. Import các thư viện cần thiết 
-<div style="text-align: center;">
+
 from google.cloud import vision\_v1 import os, ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.120.png)io 
-</div>
+
 - os : Thư viện này được sử dụng để làm việc với hệ thống tệp và thư mục. 
 - io: Thư viện này được sử dụng để đọc nội dung của tệp hình ảnh. 
 - google.cloud.vision\_v1: Thư viện này chứa các công cụ cho việc gửi hình ảnh đến Google Cloud Vision API và nhận kết quả. 
 
 1\.4.2. Thiết lập thông tin xác thực 
-<div style="text-align: center;">
-os.environ['GOOGLE\_APPLICATION\_CREDENTIALS'] = 'ServiceAccToken.JSON' ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.121.png)</div>
 
-- Đoạn mã này sử dụng một tệp JSON chứa thông tin xác thực để gọi API của<div style="text-align: center;"> Google Cloud Vision. 
-3. Khởi tạo client của Vision API client = vision.ImageAnnotatorClient() ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.122.png)</div>
+os.environ['GOOGLE\_APPLICATION\_CREDENTIALS'] = 'ServiceAccToken.JSON' ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.121.png)
+
+- Đoạn mã này sử dụng một tệp JSON chứa thông tin xác thực để gọi API của Google Cloud Vision. 
+3. Khởi tạo client của Vision API client = vision.ImageAnnotatorClient() ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.122.png)
 - Đoạn mã này tạo một đối tượng client để tương tác với Google Cloud Vision API. 
 4. Định nghĩa hàm detectFace(FILE\_PATH) 
 
@@ -1239,8 +1239,8 @@ Hàm bắt đầu bằng việc in ra số lượng khuôn mặt được phát 
 sự xuất hiện của đội mũ trên khuôn mặt, được hiển thị dựa trên nhãn từ danh sách likehood. 
 
 5. Sử dụng hàm 
-<div style="text-align: center;">
-img\_name = 'StartUp.jpg' file\_path = f'./Faces/{img\_name}' detectEmotion(file\_path) ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d</div>8bc.123.png)
+
+img\_name = 'StartUp.jpg' file\_path = f'./Faces/{img\_name}' detectEmotion(file\_path) ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.123.png)
 
 4. Chi tiết mã nguồn 
 
@@ -1285,11 +1285,11 @@ def detectEmotion(FILE\_PATH):
 img\_name = 'StartUp.jpg' file\_path = f'./Faces/{img\_name}' detectEmotion(file\_path) 
 
 5. Kết quả nhận được 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.124.jpeg)
-<div style="text-align: center;"></div>
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.125.jpeg)
-</div>
+
 3. Tìm Landmark 
 
 CHƯƠNG 5: NHẬN DIỆN THUỘC TÍNH VÀ TÌM KIẾM AN TOÀN 
@@ -1302,46 +1302,46 @@ Tính năng phát hiện thuộc tính hình ảnh phát hiện các thuộc tí
 2. Phương pháp phát hiện thuộc tính hình ảnh 
 
 Sử dụng Google Vision API để thực hiện phát hiện thuộc tính hình ảnh trên hình ảnh. Trong thiết bị đầu cuối hãy di chuyển, điều hướng đến thư mục thực hiện dự án. 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.126.jpeg)
-</div>
+
 1. Cài đặt thư viện cần thiết 
 
 Chúng ta cần cài đặt các thư viện cần thiết cho mã nguồn chương trình thông qua câu lệnh: sudo pip install -r requirements.txt 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.127.jpeg)
-</div>
+
 Trong đó, requirements.txt là tệp tin chứa thông tin thư viện cần cài đặt như bên 
 
 dưới: 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.128.jpeg)
-</div>
+
 2. Chuẩn bị kho chứa hình ảnh 
 
 Tạo ra thư mục có tên resources để chứa hình ảnh 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.129.jpeg)
-</div>
+
 3. Hướng dẫn mã nguồn chi tiết 
 1. Import các thư viện cần thiết: 
-<div style="text-align: center;">
+
 import os ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.130.png)
-</div>
+
 from google.cloud import vision 
 
 - os: Thư viện hệ thống để quản lý biến môi trường. 
 - google.cloud.vision: Thư viện cho Google Cloud Vision API. 
 2. Thiết lập thông tin xác thực: 
-<div style="text-align: center;">
-os.environ['GOOGLE\_APPLICATION\_CREDENTIALS'] = 'ServiceAccToken.JSON' ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.131.png)</div>
+
+os.environ['GOOGLE\_APPLICATION\_CREDENTIALS'] = 'ServiceAccToken.JSON' ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.131.png)
 
 Đoạn mã này sử dụng một tệp JSON chứa thông tin xác thực để gọi API của Google Cloud Vision. 
 
 3. Khởi tạo client của Vision API: 
-<div style="text-align: center;">
+
 client = vision.ImageAnnotatorClient() ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.132.png)
-</div>
+
 Đoạn mã này tạo một đối tượng client để tương tác với Google Cloud Vision API. 
 
 4. Định nghĩa hàm detect\_properties(image\_path\_or\_uri): 
@@ -1365,16 +1365,16 @@ Hàm  detect\_properties  bắt  đầu  bằng  việc  kiểm  tra  xem  đầ
 - Nếu  image\_path\_or\_uri  là  một  URL  hình  ảnh,  nó  tạo  một  đối  tượng vision.Image mới (image) và thiết lập trường image.source.image\_uri để trỏ đến URL hình ảnh. 
 - Nếu image\_path\_or\_uri là một đường dẫn tệp hình ảnh cục bộ, hàm mở tệp hình ảnh sử dụng open và đọc nội dung của tệp dưới dạng nhị phân, sau đó tạo một đối tượng vision.Image với dữ liệu hình ảnh đọc được từ tệp.  
 5. Gọi Vision API và trích xuất thông tin về màu sắc: 
-<div style="text-align: center;">
-response = client.image\_properties(image=image) props = response.image\_properties\_annotation ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d</div>8bc.133.png)
+
+response = client.image\_properties(image=image) props = response.image\_properties\_annotation ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.133.png)
 
 Dòng đầu tiên response = client.image\_properties(image=image) gọi API của Google Cloud Vision để phân tích tính chất màu sắc của hình ảnh được đại diện bởi đối tượng image. Điều này thực hiện bằng cách gọi phương thức image\_properties trên đối tượng client, và kết quả trả về được lưu trong biến response. 
 
 Sau khi gọi API thành công, response chứa thông tin phân tích màu sắc của hình ảnh. Để truy cập thông tin này, chúng ta sử dụng thuộc tính image\_properties\_annotation của response và lưu nó vào biến props. Dòng này gán kết quả phân tích màu sắc vào props để tiện cho việc truy xuất và sử dụng sau này. 
 
 6. In thông tin về màu sắc: 
-<div style="text-align: center;">
-for color in props.dominant\_colors.colors:      print(f"fraction: {color.pixel\_fraction}")      print(f"\tr: {color.color.red}") ![](./ImgSources/Aspose.Words.5a6345a9-</div>623b-4e2f-a485-4673fc99d8bc.134.png)
+
+for color in props.dominant\_colors.colors:      print(f"fraction: {color.pixel\_fraction}")      print(f"\tr: {color.color.red}") ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.134.png)
 
 `     `print(f"\tg: {color.color.green}") 
 
@@ -1390,12 +1390,12 @@ Trong đó:
 - red, green, blue, và alpha: Giá trị màu sắc trong không gian màu RGBA. Cụ thể, red, green, và blue là giá trị màu đỏ, xanh lá cây, và xanh dương, và alpha thường tượng trưng cho độ trong suốt của màu (1 là hoàn toàn trong suốt). 
 7. Gọi hàm detect\_properties cho một hình ảnh cục bộ hoặc một URL hình ảnh: 
 - Hình ảnh cục bộ 
-<div style="text-align: center;">
+
 img\_path = f'./resources/recycle.jpg' detect\_properties(img\_path) ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.135.png)
-</div>
+
 - Hình ảnh từ URL 
-<div style="text-align: center;">
-detect\_properties("https://nv.edu.vn/wp-content/uploads/2021/01/Nhat-Ban- dat-nuoc-mat-troi-moc-1.jpg") ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d</div>8bc.136.png)
+
+detect\_properties("https://nv.edu.vn/wp-content/uploads/2021/01/Nhat-Ban- dat-nuoc-mat-troi-moc-1.jpg") ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.136.png)
 
 4. Mã nguồn chi tiết 
 
@@ -1436,9 +1436,9 @@ img\_path = f'./resources/recycle.jpg'
 detect\_properties(img\_path) detect\_properties("https://nv.edu.vn/wp-content/uploads/2021/01/Nhat-Ban-dat- nuoc-mat-troi-moc-1.jpg") 
 
 5. Kết quả nhận được 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.137.jpeg)
-</div>
+
 2. Phát hiện tìm kiếm an toàn 
 
 2\.1 Giới thiệu về phát hiện thuộc tính hình ảnh 
@@ -1459,39 +1459,39 @@ Sử dụng Google Vision API để thực hiện phát hiện thuộc tính hì
 1. Cài đặt thư viện cần thiết 
 
 Chúng ta cần cài đặt các thư viện cần thiết cho mã nguồn chương trình thông qua câu lệnh: sudo pip install -r requirements.txt 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.138.jpeg)
-</div>
+
 Trong đó, requirements.txt là tệp tin chứa thông tin thư viện cần cài đặt như bên 
 
 dưới: 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.139.jpeg)
-</div>
+
 2. Chuẩn bị kho chứa hình ảnh 
 
 Tạo ra thư mục có tên resources để chứa hình ảnh 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.140.jpeg)
-</div>
+
 3. Hướng dẫn mã nguồn chi tiết 
 1. Import các thư viện cần thiết: 
-<div style="text-align: center;">
+
 import os ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.141.png)
-</div>
+
 from google.cloud import vision 
 
 - os: Thư viện hệ thống để quản lý biến môi trường. 
 - google.cloud.vision: Thư viện cho Google Cloud Vision API. 
 2. Thiết lập thông tin xác thực: 
-<div style="text-align: center;">
-os.environ['GOOGLE\_APPLICATION\_CREDENTIALS'] = 'ServiceAccToken.JSON' ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.142.png)</div>
+
+os.environ['GOOGLE\_APPLICATION\_CREDENTIALS'] = 'ServiceAccToken.JSON' ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.142.png)
 
 - Đoạn mã này sử dụng một tệp JSON chứa thông tin xác thực để gọi API của Google Cloud Vision. 
 3. Khởi tạo client của Vision API: 
-<div style="text-align: center;">
+
 client = vision.ImageAnnotatorClient() ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.143.png)
-</div>
+
 - Đoạn mã này tạo một đối tượng client để tương tác với Google Cloud Vision API. 
 4. Định nghĩa hàm detect\_safe\_search(image\_path\_or\_uri): 
 
@@ -1515,8 +1515,8 @@ if image\_path\_or\_uri.startswith("http://") or image\_path\_or\_uri.startswith
 `        `image = vision.Image(content=content) 
 
 5. Gọi Vision API và trích xuất thông tin về tìm kiếm an toàn: 
-<div style="text-align: center;">
-response = client.safe\_search\_detection(image=image) safe = response.safe\_search\_annotation ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d</div>8bc.144.png)
+
+response = client.safe\_search\_detection(image=image) safe = response.safe\_search\_annotation ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.144.png)
 
 - Đoạn mã response = client.safe\_search\_detection(image=image) là để gọi tới Google Cloud Vision API để phân tích tính cảnh báo và an toàn của hình ảnh, và image ở đây là đối tượng hình ảnh mà bạn muốn phân tích. Sau khi gọi API và hoàn thành quá trình phân tích, kết quả được trả về từ API sẽ được lưu trữ trong biến response. 
 - Dòng safe = response.safe\_search\_annotation dùng để trích xuất thông tin liên quan đến tính cảnh báo và an toàn từ kết quả phân tích của hình ảnh. Thông tin này là một phần của kết quả phân tích trả về từ API và được lưu trong thuộc tính safe\_search\_annotation của đối tượng response. 
@@ -1549,16 +1549,16 @@ print("Safe search:")
 
 print(f"adult: {likelihood\_name[safe.adult]}") print(f"medical: {likelihood\_name[safe.medical]}") print(f"spoofed: {likelihood\_name[safe.spoof]}") print(f"violence: {likelihood\_name[safe.violence]}") print(f"racy: {likelihood\_name[safe.racy]}") 
 
-7. Gọi hàm detect\_safe\_search cho một hình ảnh cục bộ hoặc một URL h<div style="text-align: center;">ình ảnh: 
+7. Gọi hàm detect\_safe\_search cho một hình ảnh cục bộ hoặc một URL hình ảnh: 
 - Hình ảnh cục bộ detect\_safe\_search("./resources/threatening.jpg") ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.145.png)
-- Hình ảnh từ URL </div>
+- Hình ảnh từ URL 
 
-detect\_safe\_search("https://images2.thanhnien.vn/Uploaded/ngocthanh/2022 \_08<div style="text-align: center;">\_06/dieu-tri-sot-xuat-huyet-cho-tre-em-tai-benh-vien-benh-nhiet-doi-tp- 5822.jpg") ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.146.png)</div>
+detect\_safe\_search("https://images2.thanhnien.vn/Uploaded/ngocthanh/2022 \_08\_06/dieu-tri-sot-xuat-huyet-cho-tre-em-tai-benh-vien-benh-nhiet-doi-tp- 5822.jpg") ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.146.png)
 
 4. Mã nguồn chi tiết 
-<div style="text-align: center;">
+
 import os ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.147.png)
-</div>
+
 from google.cloud import vision 
 
 os.environ['GOOGLE\_APPLICATION\_CREDENTIALS'] = 
@@ -1609,9 +1609,9 @@ response = client.safe\_search\_detection(image=image) safe = response.safe\_sea
 
 - Sử dụng hàm detect\_safe\_search với đối số là đường dẫn cục bộ hoặc URL detect\_safe\_search("https://images2.thanhnien.vn/Uploaded/ngocthanh/2022\_08\_06 /dieu-tri-sot-xuat-huyet-cho-tre-em-tai-benh-vien-benh-nhiet-doi-tp-5822.jpg") detect\_safe\_search("./resources/threatening.jpg") 
 5. Kết quả nhận được 
-<div style="text-align: center;">
+
 ![](./ImgSources/Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.148.jpeg)
-72 </div>
+72 
 
 [ref1]: Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.064.png
 [ref2]: Aspose.Words.5a6345a9-623b-4e2f-a485-4673fc99d8bc.085.png
