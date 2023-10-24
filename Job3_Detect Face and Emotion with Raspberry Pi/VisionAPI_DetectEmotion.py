@@ -3,7 +3,7 @@ import os, io
 from google.cloud import vision_v1
 
 # Đặt biến môi trường để xác thực với Google Cloud Vision API
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'ServiceAccToken_ChuThang.JSON'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'ServiceAccToken.JSON'
 # Tạo một phiên bản của ImageAnnotatorClient để gửi hình ảnh đến Google Cloud Vision API
 client = vision_v1.ImageAnnotatorClient()
 

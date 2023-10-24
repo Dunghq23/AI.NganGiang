@@ -3,7 +3,7 @@ from google.cloud import vision_v1
 import numpy as np
 import os, io
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'ServiceAccToken_ChuThang.JSON'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'ServiceAccToken.JSON'
 client = vision_v1.ImageAnnotatorClient()
 
 def detectFace(FILE_PATH):
