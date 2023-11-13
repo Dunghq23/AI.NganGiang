@@ -1,15 +1,9 @@
-import tensorflow.compat.v1 as tf
+import tensorflow as tf
 import matplotlib.pyplot as plt
 import random
 
 # Tắt chế độ Eager Execution trong TensorFlow 2.x
 tf.compat.v1.disable_eager_execution()
-tf.disable_v2_behavior()  # Tắt chế độ Eager Execution
-
-# Đặt giống ngẫu nhiên
-tf.set_random_seed(777)
-
-# Tiếp tục với mã của bạn
 
 tf.set_random_seed(777)  # Đặt giống ngẫu nhiên
 

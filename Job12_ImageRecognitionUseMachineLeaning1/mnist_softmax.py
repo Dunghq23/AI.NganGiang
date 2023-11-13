@@ -2,14 +2,10 @@ import tensorflow.compat.v1 as tf
 import matplotlib.pyplot as plt
 import random
 
-# Tắt chế độ Tensor Flow 2.x
-tf.disable_v2_behavior()
-
 tf.set_random_seed (777) # for reproducibility
 
 from tensorflow.examples.tutorials.mnist import input_data
-# Check out https://www.tensorflow.org/get started/mnist/beginners for
-# more information about the mnist dataset
+# Check out https://www.tensorflow.org/get started/mnist/beginners for more information about the mnist dataset
 
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
@@ -48,8 +44,8 @@ with tf.Session() as sess:
             batch_xs, batch_ys = mnist.train.next_batch(batch_size)
             _cost_val = sess.run([train, cost], feed_dict=({X: batch_xs, Y: batch_ys}))
             avg_cost += _cost_val / num_iterations
-            print("Epoch: (04d), Cost: (9f)".format(epoch + 1, avg_cost))
-            print("Learning finished")
+        print("Epoch: (04d), Cost: (9f)".format(epoch + 1, avg_cost))
+    print("Learning finished")
     # Test the model using test sets
     print(
         "Accuracy: ",
