@@ -1,19 +1,20 @@
 import tensorflow as tf
 import random
-# import matplotlib.pyplot as plt
-tf.compat.v1.disable_eager_execution()
+import matplotlib.pyplot as plt
 from tensorflow.keras.datasets import mnist
 
 tf.random.set_seed(777)
-# mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
+
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 x_train, x_test = x_train / 255.0, x_test / 255.0
-
 
 # parameters
 learning_rate = 0.001
 training_epochs = 15
 batch_size = 100
+
+# Tắt tính toán tự động
+tf.compat.v1.disable_eager_execution()
 
 # input place holders
 X = tf.compat.v1.placeholder(tf.float32, [None, 784])
@@ -44,15 +45,34 @@ sess.run(tf.compat.v1.global_variables_initializer())
 
 # train my model
 for epoch in range(training_epochs):
-  avg_cost = 0
-  total_batch = int(mnist.train.num_examples / batch_size)
+    avg_cost = 0
+    total_batch = int(len(x_train) / batch_size)
 
-  for i in range(total_batch):
-      batch_xs, batch_ys = mnist.train.next_batch(batch_size)
-      feed_dict = {X: batch_xs, Y: batch_ys}
-      c, _ = sess.run([cost, optimizer], feed_dict=feed_dict)
-      avg_cost += c / total_batch
+    for i in range(total_batch):
+        start = i * batch_size
+        end = (i + 1) * batch_size
+        batch_xs, batch_ys = x_train[start:end], y_train[start:end]
+        batch_xs = batch_xs.reshape(-1, 784)
+        batch_ys = tf.keras.utils.to_categorical(batch_ys, 10)
+        feed_dict = {X: batch_xs, Y: batch_ys}
+        c, _ = sess.run([cost, optimizer], feed_dict=feed_dict)
+        avg_cost += c / total_batch
 
-  print('Epoch:', '%04d' % (epoch+1), 'cost = ', '{..9f}'.format(avg_cost))
+    print('Epoch:', '%04d' % (epoch + 1), 'cost = ', '{:.9f}'.format(avg_cost))
 
 print('Learning Finished')
+
+# Kiểm thử mô hình và kiểm tra độ chính xác
+correct_prediction = tf.equal(tf.argmax(hypothesis, 1), tf.argmax(Y, 1))
+accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+print('Accuracy:', sess.run(accuracy, feed_dict={
+    X: x_test.reshape(-1, 784),
+    Y: tf.keras.utils.to_categorical(y_test, 10)
+}))
+
+# Lấy một ví dụ và dự đoán
+r = random.randint(0, len(x_test) - 1)
+print("Label:", y_test[r])
+print("Prediction:", sess.run(tf.argmax(hypothesis, 1), feed_dict={X: x_test[r].reshape(1, -1)}))
+plt.imshow(x_test[r], cmap="hot")
+plt.show()
