@@ -1,9 +1,12 @@
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import matplotlib.pyplot as plt
 import random
 
+# Tắt Eager Execution (Eager mode)
+tf.disable_eager_execution()
+
 # Đặt giống ngẫu nhiên
-tf.random.set_seed(777)
+tf.set_random_seed(777)
 
 # Tải dữ liệu MNIST từ TensorFlow Datasets
 mnist = tf.keras.datasets.mnist
