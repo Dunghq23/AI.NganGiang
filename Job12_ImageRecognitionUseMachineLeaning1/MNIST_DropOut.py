@@ -1,22 +1,24 @@
 import tensorflow as tf
+from tensorflow.keras.layers import Input, Dense, Dropout
+from tensorflow.keras.models import Model
+from tensorflow.keras.datasets import mnist
 import random
 import matplotlib.pyplot as plt
-from tensorflow.keras.datasets import mnist
 
-tf.compat.v1.disable_eager_execution()
-
-tf.compat.v1.set_random_seed(777)  # reproducibility
+tf.random.set_seed(777)  # Reproducibility
 
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
+
+# Normalize pixel values to be between 0 and 1
 x_train, x_test = x_train / 255.0, x_test / 255.0
 
-# Flatten the images from 28x28 to 784
-x_train = x_train.reshape((-1, 784))
-x_test = x_test.reshape((-1, 784))
+# Flatten the images
+x_train_flat = x_train.reshape((x_train.shape[0], -1))
+x_test_flat = x_test.reshape((x_test.shape[0], -1))
 
 # Convert labels to one-hot encoding
-y_train = tf.keras.utils.to_categorical(y_train, 10)
-y_test = tf.keras.utils.to_categorical(y_test, 10)
+y_train = tf.one_hot(y_train, 10)
+y_test = tf.one_hot(y_test, 10)
 
 # Parameters
 learning_rate = 0.001
@@ -24,36 +26,31 @@ training_epochs = 15
 batch_size = 100
 
 # Input placeholders
-X = tf.compat.v1.placeholder(tf.float32, [None, 784])
-Y = tf.compat.v1.placeholder(tf.float32, [None, 10])
-keep_prob = tf.compat.v1.placeholder(tf.float32)  # for dropout
+X = Input(shape=(784,))
 
-# Weights and biases for NN layers with Xavier initialization
-initializer = tf.initializers.GlorotUniform()
+# Define the model
+L1 = Dense(512, activation='relu')(X)
+L1_dropout = Dropout(0.3)(L1)
 
-W1 = tf.Variable(initializer(shape=[784, 256]))
-b1 = tf.Variable(tf.random.normal([256]))
-L1 = tf.nn.relu(tf.matmul(X, W1) + b1)
-L1 = tf.nn.dropout(L1, rate=1 - keep_prob)  # dropout layer
+L2 = Dense(512, activation='relu')(L1_dropout)
+L2_dropout = Dropout(0.3)(L2)
 
-W2 = tf.Variable(initializer(shape=[256, 256]))
-b2 = tf.Variable(tf.random.normal([256]))
-L2 = tf.nn.relu(tf.matmul(L1, W2) + b2)
-L2 = tf.nn.dropout(L2, rate=1 - keep_prob)  # dropout layer
+L3 = Dense(512, activation='relu')(L2_dropout)
+L3_dropout = Dropout(0.3)(L3)
 
-W3 = tf.Variable(initializer(shape=[256, 10]))
-b3 = tf.Variable(tf.random.normal([10]))
-hypothesis = tf.matmul(L2, W3) + b3
+L4 = Dense(512, activation='relu')(L3_dropout)
+L4_dropout = Dropout(0.3)(L4)
 
-# Define cost/loss and optimizer
-cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(logits=hypothesis, labels=Y))
-optimizer = tf.compat.v1.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
+hypothesis = Dense(10, activation='softmax')(L4_dropout)
 
-# Initialize
-sess = tf.compat.v1.Session()
-sess.run(tf.compat.v1.global_variables_initializer())
+# Build the model
+model = Model(inputs=X, outputs=hypothesis)
 
-# Train the model
+# Compile the model
+optimizer = tf.keras.optimizers.Adam(learning_rate=learning_rate)
+model.compile(optimizer=optimizer, loss='categorical_crossentropy', metrics=['accuracy'])
+
+# Custom training loop
 for epoch in range(training_epochs):
     avg_cost = 0
     total_batch = int(len(x_train) / batch_size)
@@ -61,27 +58,32 @@ for epoch in range(training_epochs):
     for i in range(total_batch):
         start = i * batch_size
         end = (i + 1) * batch_size
-        batch_xs, batch_ys = x_train[start:end], y_train[start:end]
-        feed_dict = {X: batch_xs, Y: batch_ys, keep_prob: 0.7}  # set dropout probability
-        c, _ = sess.run([cost, optimizer], feed_dict=feed_dict)
-        avg_cost += c / total_batch
+        batch_xs, batch_ys = x_train_flat[start:end], y_train[start:end]
 
-    print('Epoch:', '%04d' % (epoch + 1), 'cost = ', '{:.9f}'.format(avg_cost))
+        with tf.GradientTape() as tape:
+            logits = model(batch_xs, training=True)
+            loss = tf.keras.losses.categorical_crossentropy(batch_ys, logits)
+            avg_cost += tf.reduce_mean(loss) / total_batch
+
+        gradients = tape.gradient(loss, model.trainable_variables)
+        optimizer.apply_gradients(zip(gradients, model.trainable_variables))
+
+    print('Epoch:', '{:04d}'.format(epoch + 1), 'cost = ', '{:.9f}'.format(avg_cost))
 
 print('Learning Finished')
 
 # Test the model and check accuracy
-correct_prediction = tf.equal(tf.argmax(hypothesis, 1), tf.argmax(Y, 1))
-accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-print('Accuracy:', sess.run(accuracy, feed_dict={X: x_test, Y: y_test, keep_prob: 1.0}))  # keep_prob is 1.0 during testing
+accuracy = model.evaluate(x_test_flat, y_test, batch_size=batch_size, verbose=0)[1]
+print('Accuracy:', accuracy)
 
 # Get a random example and print label and prediction
 r = random.randint(0, len(x_test) - 1)
 label = y_test[r]
-prediction = sess.run(tf.argmax(hypothesis, 1), feed_dict={X: x_test[r].reshape(1, -1), keep_prob: 1.0})  # keep_prob is 1.0 during testing
+prediction = model.predict(x_test_flat[r].reshape(1, -1))
+predicted_label = tf.argmax(prediction, 1).numpy()[0]
 
-print("Label: ", sess.run(tf.argmax(label, 0)))
-print("Prediction: ", prediction[0])
+print("Label: ", tf.argmax(label, 0).numpy())
+print("Prediction: ", predicted_label)
 
 # Display the image
 plt.imshow(x_test[r].reshape(28, 28), cmap="gray")
