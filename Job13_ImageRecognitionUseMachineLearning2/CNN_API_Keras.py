@@ -1,4 +1,3 @@
-
 # Importing the required Keras modules containing model and layers
 import tensorflow as tf
 from tensorflow.keras import layers, models
