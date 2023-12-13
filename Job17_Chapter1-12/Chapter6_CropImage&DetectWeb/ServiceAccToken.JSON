@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "static-lens-399804",
+  "private_key_id": "fa5431bc5ab336bb600b0475d57d7539342fbe2b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDGd0KkQRIa8wwW\np/IC6Mz2vDpGMhkpErI/cGtpqum2pXKKMcEdFNRXMbMvjx1KUUVAXStskgdTa52T\nrOj1LuKQdQhC4EFoYapZPijXRE9SnoLDSKwLIS9Q6I1CDkyh0QUdl1goHN4vzWq1\nkBPoegjzF3PCk/TbI16z3WQwbx9OPuxNaewrNWhZbO+2TFr2GOpnt1hqVqLWf5q0\nJFXckxIYTcGiyZVW5ahGBglHKbCzw3nUQ2EI0hODbxcf6sigmtcGci6vSVkFQYR6\na3gTX73qlSBZYFhhaYDgGX4zlbLYlh0eMvfwtriS/Zr/7BhH1E2S0t8mxka3kEP2\niFo7QVYrAgMBAAECgf9KHBoJkTaxkGXtHBLPQEPz9yTwKdEvNfa7M6cxo3Yohxlc\n1rFYVVyT3W8FxzRr2zZcUoahkF/7LjpygwBiRNB6OVHigpIa3BRY0SBi4JMHcaNW\neaH1qo0fHSVxr9kSYw02vIPrzABo8adbDM2G46mMQWyE4Mc/DVGS2KVN6qq/5/Hh\nJCZyGT2hNiebS4lVDqtFoB6B5DH015OdWVItbmSKKoxNvynwzlumi3uXQ2oeA++7\naJov2UB+wDPGArjAsOEMpfX3YvjBcMkmVq0nN6dbE5VGlGsfierzGZnzM6t3NbYP\nMcQyDAQcLRnok19OBKd5hnWqfM5Ksj7JAzBUwsECgYEA8nA4jdeYbwbZk/i9vRkm\nJiSo6HS7kKVEI/k+n6mevlIBlWADLd+Kog2VwaSPc7BVnvHrK6r7fvlVC3tOjikV\nOeVljGsrpuDrnFwGcn+lDibWZ/7Sci2VmkGthCT17Kp8TwzlSUsZurqD/v7/AZ5F\nUvV0aLnmWwtcH7oD/GAy0UECgYEA0ZFXi67TkGX1jbSziJvJ5HjY2dRLVnEFXq43\nj87gLp23HrJVD3wG45Y8Z2g9Y1WtWDaKk6sOeJWSR7Rc7T+ldchZLu82aOHgaYCz\nJe0GH2fCU7BCVS0/WxPSXifDSXYnfH966LWLFQRGKZTCoxCyuzERnYI/ozGV+qZv\nZSkr4GsCgYAwQM3AzYx1bLOZlASPwpWpOdq0iadbXsl1L4KbXLNPxhqylG2Nj9ST\n9Ig+BnbW293uyM+53Uo5N38Jzf0QpnSnFVVk4V/K0zGR6W8PEwDTFD/QaxOPzirc\njP3wMzsPY89iHHr2X5A7biwfcLlopQu/O0N0JKwIqvYnCmsIrEzxAQKBgQDHvByS\nVvfxAhw9COKr6r9LcBpN0lZTdrjFeooeF+/2vf6P1SvY7D6snr3HWMRZbokeMC13\nfGr4ZqXajX6b6DNMxLyrTPawk8eNBkq4dOWG/R9rH+y4vb1KkuPHNWKdG22a7O05\n6f069K3iZ5PyUrHmU2gUlNUONu5YzFQTOGBHLQKBgQCoe2m2OX7Aey6yvKoZqCas\nCwZNyo5xz8GrxlxHkFHlpIvoTNTfyiVBa+sYNb5MY0SALkyAgQXhAGVGVhiEIM+q\nNRYqw2d+O6vFn3BNrrNbRZws4KK6YQ/Kkt+oouWAw/u5uXLbDTc8cnYYdsAjUome\ng1PTRpoHMXgb5xG37Deabg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "turial-creds@static-lens-399804.iam.gserviceaccount.com",
+  "client_id": "100893547410589661476",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/turial-creds%40static-lens-399804.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

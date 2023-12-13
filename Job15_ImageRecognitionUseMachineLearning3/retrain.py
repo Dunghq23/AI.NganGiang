@@ -97,20 +97,20 @@ size and latency options.
 
 To use with TensorBoard:
 
-By default, this script will log summaries to /tmp/retrain_logs directory
+By default, this script will log summaries to /content/drive/MyDrive/NGANGIANGINTERNSHIP/Job15_ImageRecognitionUseMachineLearning3/tmp/retrain_logs directory
 
 Visualize the summaries with this command:
 
-tensorboard --logdir /tmp/retrain_logs
+tensorboard --logdir /content/drive/MyDrive/NGANGIANGINTERNSHIP/Job15_ImageRecognitionUseMachineLearning3/tmp/retrain_logs
 
 To use with Tensorflow Serving, run this tool with --saved_model_dir set
 to some increasingly numbered export location under the model base path, e.g.:
 
 ```bash
 python retrain.py (... other args as before ...) \
-    --saved_model_dir=/tmp/saved_models/$(date +%s)/
+    --saved_model_dir=/content/drive/MyDrive/NGANGIANGINTERNSHIP/Job15_ImageRecognitionUseMachineLearning3/tmp/saved_models/$(date +%s)/
 tensorflow_model_server --port=9000 --model_name=my_image_classifier \
-    --model_base_path=/tmp/saved_models/
+    --model_base_path=/content/drive/MyDrive/NGANGIANGINTERNSHIP/Job15_ImageRecognitionUseMachineLearning3/tmp/saved_models/
 ```
 """
 # pylint: enable=line-too-long
@@ -138,7 +138,7 @@ FLAGS = None
 MAX_NUM_IMAGES_PER_CLASS = 2 ** 27 - 1  # ~134M
 
 # The location where variable checkpoints will be stored.
-CHECKPOINT_NAME = '/tmp/_retrain_checkpoint'
+CHECKPOINT_NAME = '/content/drive/MyDrive/NGANGIANGINTERNSHIP/Job15_ImageRecognitionUseMachineLearning3/tmp/_retrain_checkpoint'
 
 # A module is understood as instrumented for quantization with TF-Lite
 # if it contains any of these ops.
@@ -1159,7 +1159,7 @@ if __name__ == '__main__':
   parser.add_argument(
     '--intermediate_output_graphs_dir',
     type=str,
-    default='/tmp/intermediate_graph/',
+    default='/content/drive/MyDrive/NGANGIANGINTERNSHIP/Job15_ImageRecognitionUseMachineLearning3/tmp/intermediate_graph/',
     help='Where to save the intermediate graphs.'
   )
   parser.add_argument(
@@ -1180,7 +1180,7 @@ if __name__ == '__main__':
   parser.add_argument(
     '--summaries_dir',
     type=str,
-    default='/tmp/retrain_logs',
+    default='/content/drive/MyDrive/NGANGIANGINTERNSHIP/Job15_ImageRecognitionUseMachineLearning3/tmp/retrain_logs',
     help='Where to save summary logs for TensorBoard.'
   )
   parser.add_argument(
@@ -1254,7 +1254,7 @@ if __name__ == '__main__':
   parser.add_argument(
     '--bottleneck_dir',
     type=str,
-    default='/tmp/bottleneck',
+    default='/content/drive/MyDrive/NGANGIANGINTERNSHIP/Job15_ImageRecognitionUseMachineLearning3/tmp/bottleneck',
     help='Path to cache bottleneck layer values as files.'
   )
   parser.add_argument(
