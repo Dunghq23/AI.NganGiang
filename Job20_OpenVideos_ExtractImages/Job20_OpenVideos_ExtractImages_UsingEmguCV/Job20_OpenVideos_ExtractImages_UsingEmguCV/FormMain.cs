@@ -1,12 +1,13 @@
-﻿using AxWMPLib;
-using Emgu.CV;
-using Emgu.CV.CvEnum;
-using Emgu.CV.Structure;
-using System;
+﻿using System;
 using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using AxWMPLib;
+using Emgu.CV;
+using Emgu.CV.CvEnum;
+using Emgu.CV.Structure;
 
 namespace Job20_OpenVideos_ExtractImages_UsingEmguCV
 {
@@ -48,14 +49,14 @@ namespace Job20_OpenVideos_ExtractImages_UsingEmguCV
                 // Tạo một Task chạy quá trình trích xuất ảnh từ video
                 await Task.Run(() => ExtractImages());
 
-                MessageBox.Show("Hình ảnh đã được trích xuất và hiển thị trên PictureBox.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Hình ảnh đã được trích xuất và lưu lại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Đặt capturing về false sau khi quá trình trích xuất hoàn tất
                 capturing = false;
             }
             else
             {
-                MessageBox.Show("Quá trình trích xuất đang diễn ra hoặc bạn chưa chọn một tệp video.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng chọn một tệp video.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -63,7 +64,7 @@ namespace Job20_OpenVideos_ExtractImages_UsingEmguCV
         {
             while (capture != null && capture.Ptr != IntPtr.Zero && capture.Read(frame))
             {
-                ProcessAndDisplayFrame(frame);
+                ProcessFrameAndSave(frame);
                 frameIndex++;
             }
 
@@ -72,7 +73,7 @@ namespace Job20_OpenVideos_ExtractImages_UsingEmguCV
             capture.Dispose();
         }
 
-        private void ProcessAndDisplayFrame(Mat frame)
+        private void ProcessFrameAndSave(Mat frame)
         {
             // Tính toán chiều rộng và chiều cao mới của frame dựa trên tỷ lệ khung hình
             double aspectRatio = (double)frame.Width / frame.Height;
@@ -104,65 +105,30 @@ namespace Job20_OpenVideos_ExtractImages_UsingEmguCV
                 picBox.Image = bitmap;
                 picBox.Invalidate();
             });
-        }
 
-        private void btnSaveImages_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(WinMediaPlayer.URL))
+
+            // Lấy đường dẫn thư mục hiện tại của ứng dụng
+            string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+            // Kết hợp đường dẫn tương đối với thư mục hiện tại để có đường dẫn đầy đủ
+            string relativePath = @"..\..\..\ExtractImages"; // Đường dẫn tương đối từ thư mục hiện tại
+            string extractPath = Path.Combine(currentDirectory, relativePath);
+
+            // Đảm bảo rằng thư mục đích tồn tại và tạo nó nếu chưa có
+            if (!Directory.Exists(extractPath))
             {
-                string videoFilePath = WinMediaPlayer.URL;
-
-                // Lấy tên của tệp video mà không bao gồm phần mở rộng
-                string videoFileName = Path.GetFileNameWithoutExtension(videoFilePath);
-
-                using (var capture = new VideoCapture(videoFilePath))
-                {
-                    Mat frame = new Mat();
-                    int i = 0;
-
-                    // Hiển thị hộp thoại để chọn thư mục lưu
-                    using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
-                    {
-                        folderBrowserDialog.Description = "Chọn thư mục để lưu ảnh";
-
-                        if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
-                        {
-                            string extractPath = folderBrowserDialog.SelectedPath;
-
-                            while (capture.Read(frame)) // Đọc từng frame từ video
-                            {
-                                ProcessFrameAndSave(frame, extractPath, videoFileName, ref i);
-                            }
-
-                            MessageBox.Show($"Hình ảnh đã được trích xuất và lưu vào thư mục: {extractPath}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                }
+                Directory.CreateDirectory(extractPath);
             }
-            else
-            {
-                MessageBox.Show("Vui lòng chọn một tệp video.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
-
-        private void ProcessFrameAndSave(Mat frame, string extractPath, string videoFileName, ref int i)
-        {
-            ProcessAndDisplayFrame(frame);
-
-            // Chuyển đổi frame thành hình ảnh Bitmap
-            Image<Bgr, byte> img = frame.ToImage<Bgr, byte>();
-            Bitmap bitmap = img.ToBitmap();
-
-            // Đặt tên file dựa trên tên của video và chỉ số frame
-            string fileName = $"{videoFileName}_frame_{i + 1}.png";
-
-            // Đường dẫn đầy đủ của file
-            string filePath = Path.Combine(extractPath, fileName);
 
             // Lưu frame thành ảnh
+            string videoFilePath = WinMediaPlayer.URL;
+            string videoFileName = Path.GetFileNameWithoutExtension(videoFilePath);
+
+            string fileName = $"{videoFileName}_frame_{frameIndex + 1}.png";
+            string filePath = Path.Combine(extractPath, fileName);
+
             img.Save(filePath);
 
-            i++;
         }
     }
 }
