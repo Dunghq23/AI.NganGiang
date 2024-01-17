@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\HAQUANGDUNG\\Job20_OpenVideos_ExtractImages\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV.csproj": {}
+    "D:\\Documents\\Work\\NganGiang\\HAQUANGDUNG\\Job20_OpenVideos_ExtractImages\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV.csproj": {}
   },
   "projects": {
-    "H:\\HAQUANGDUNG\\Job20_OpenVideos_ExtractImages\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV.csproj": {
+    "D:\\Documents\\Work\\NganGiang\\HAQUANGDUNG\\Job20_OpenVideos_ExtractImages\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\HAQUANGDUNG\\Job20_OpenVideos_ExtractImages\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV.csproj",
+        "projectUniqueName": "D:\\Documents\\Work\\NganGiang\\HAQUANGDUNG\\Job20_OpenVideos_ExtractImages\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV.csproj",
         "projectName": "Job20_OpenVideos_ExtractImages_UsingEmguCV",
-        "projectPath": "H:\\HAQUANGDUNG\\Job20_OpenVideos_ExtractImages\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV.csproj",
+        "projectPath": "D:\\Documents\\Work\\NganGiang\\HAQUANGDUNG\\Job20_OpenVideos_ExtractImages\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "H:\\HAQUANGDUNG\\Job20_OpenVideos_ExtractImages\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\obj\\",
+        "outputPath": "D:\\Documents\\Work\\NganGiang\\HAQUANGDUNG\\Job20_OpenVideos_ExtractImages\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\Job20_OpenVideos_ExtractImages_UsingEmguCV\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
