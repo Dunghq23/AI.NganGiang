@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "u/T3GnxbDJr2CKhAPz/dC/0FOasmbc2IxVOMUYKaHkyIQ6VYYYeWWta5SHnxRYMIkhW1SU3/4nOjTJ71AWix4w==",
+  "success": true,
+  "projectFilePath": "D:\\Documents\\Work\\NganGiang\\HAQUANGDUNG\\Job21_BuildAWinformProgramToRecognizeFacesUsingDlib\\Recognition\\Recognition.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\aforge\\2.2.5\\aforge.2.2.5.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\aforge.video\\2.2.5\\aforge.video.2.2.5.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\aforge.video.directshow\\2.2.5\\aforge.video.directshow.2.2.5.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "+um16CVtmmxeFCHNfTJMrhBRSuPI48ZeH+zEMaMnhRVwa4PZ6OR01hIBlcQ0BxKWSVlv8EOouXZKthxQsMzy3Q==",
+  "success": true,
+  "projectFilePath": "D:\\Documents\\Work\\NganGiang\\HAQUANGDUNG\\Job23_\\Recognition\\Recognition.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\aforge\\2.2.5\\aforge.2.2.5.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\aforge.video\\2.2.5\\aforge.video.2.2.5.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\aforge.video.directshow\\2.2.5\\aforge.video.directshow.2.2.5.nupkg.sha512"
+  ],
+  "logs": []
+}

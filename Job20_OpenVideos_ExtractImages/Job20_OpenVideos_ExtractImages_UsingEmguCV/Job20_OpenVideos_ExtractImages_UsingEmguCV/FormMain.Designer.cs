@@ -33,7 +33,6 @@
             this.btnOpenVideo = new System.Windows.Forms.Button();
             this.btnExtractImage = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSaveImages = new System.Windows.Forms.Button();
             this.WinMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
@@ -52,7 +51,7 @@
             this.picBox.Location = new System.Drawing.Point(0, 0);
             this.picBox.Margin = new System.Windows.Forms.Padding(2);
             this.picBox.Name = "picBox";
-            this.picBox.Size = new System.Drawing.Size(473, 455);
+            this.picBox.Size = new System.Drawing.Size(455, 595);
             this.picBox.TabIndex = 0;
             this.picBox.TabStop = false;
             // 
@@ -81,26 +80,14 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.Controls.Add(this.btnSaveImages);
             this.panel1.Controls.Add(this.btnExtractImage);
             this.panel1.Controls.Add(this.btnOpenVideo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(908, 36);
+            this.panel1.Size = new System.Drawing.Size(872, 36);
             this.panel1.TabIndex = 0;
-            // 
-            // btnSaveImages
-            // 
-            this.btnSaveImages.Location = new System.Drawing.Point(201, 2);
-            this.btnSaveImages.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSaveImages.Name = "btnSaveImages";
-            this.btnSaveImages.Size = new System.Drawing.Size(95, 31);
-            this.btnSaveImages.TabIndex = 2;
-            this.btnSaveImages.Text = "Save Images";
-            this.btnSaveImages.UseVisualStyleBackColor = true;
-            this.btnSaveImages.Click += new System.EventHandler(this.btnSaveImages_Click);
             // 
             // WinMediaPlayer
             // 
@@ -110,7 +97,7 @@
             this.WinMediaPlayer.Margin = new System.Windows.Forms.Padding(2);
             this.WinMediaPlayer.Name = "WinMediaPlayer";
             this.WinMediaPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("WinMediaPlayer.OcxState")));
-            this.WinMediaPlayer.Size = new System.Drawing.Size(431, 455);
+            this.WinMediaPlayer.Size = new System.Drawing.Size(413, 595);
             this.WinMediaPlayer.TabIndex = 0;
             // 
             // splitContainer1
@@ -126,8 +113,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.picBox);
-            this.splitContainer1.Size = new System.Drawing.Size(908, 455);
-            this.splitContainer1.SplitterDistance = 431;
+            this.splitContainer1.Size = new System.Drawing.Size(872, 595);
+            this.splitContainer1.SplitterDistance = 413;
             this.splitContainer1.TabIndex = 1;
             // 
             // FormMain
@@ -135,7 +122,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(908, 491);
+            this.ClientSize = new System.Drawing.Size(872, 631);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -158,7 +145,6 @@
         private System.Windows.Forms.Button btnExtractImage;
         private System.Windows.Forms.Panel panel1;
         private AxWMPLib.AxWindowsMediaPlayer WinMediaPlayer;
-        private System.Windows.Forms.Button btnSaveImages;
         private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
